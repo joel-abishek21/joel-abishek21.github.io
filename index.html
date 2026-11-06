@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joel Abishek Rajkumar | Portfolio</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#6b6b6b;--line:#e3e3e3;--soft:#f7f7f7;--acc:#1a1a1a;--on:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111;--fg:#ececec;--mut:#9a9a9a;--line:#2b2b2b;--soft:#181818;--acc:#ececec;--on:#111;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111;--fg:#ececec;--mut:#9a9a9a;--line:#2b2b2b;--soft:#181818;--acc:#ececec;--on:#111;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15.5px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;margin:0}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+header{padding:64px 0 28px}
+.top{display:flex;gap:22px;align-items:center}
+.me{width:92px;height:92px;border-radius:50%;flex:none;overflow:hidden;background:var(--soft);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.me img{width:100%;height:100%;object-fit:cover}
+h1{font-size:clamp(1.9rem,6vw,2.5rem);font-weight:500;letter-spacing:.01em}
+.role{color:var(--mut);margin:4px 0 0;font-size:.95rem}
+.contact{margin-top:22px;font-size:.88rem;color:var(--mut);display:flex;flex-wrap:wrap;gap:4px 18px}
+.contact a{text-decoration:none;border-bottom:1px solid var(--line);color:var(--fg)}
+.contact a:hover{border-color:var(--fg)}
+nav{margin-top:26px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+nav a{color:var(--mut);text-decoration:none}nav a:hover{color:var(--fg)}
+section{padding:38px 0 6px}
+h2{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.en{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:0 0 22px}
+.en h3{font-size:1.06rem}
+.meta{color:var(--mut);font-size:.86rem;font-style:italic}
+.en p{margin:6px 0 0;color:var(--fg);font-size:.94rem}
+.tg{margin-top:6px;color:var(--mut);font-size:.78rem;letter-spacing:.04em}
+.th{width:150px;aspect-ratio:4/3;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--soft);display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.th img{width:100%;height:100%;object-fit:cover}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 28px}
+@media(max-width:560px){.en{grid-template-columns:1fr}.th{width:100%;aspect-ratio:16/9;order:-1}.top{gap:16px}.me{width:72px;height:72px}}
+.edu h3{font-size:1.06rem}
+.stats{display:flex;flex-wrap:wrap;margin-top:12px;border:1px solid var(--line);border-radius:4px}
+.stats div{flex:1 1 110px;padding:10px 14px;border-right:1px solid var(--line);font-size:.78rem;color:var(--mut);letter-spacing:.04em}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:Georgia,serif;font-size:1.15rem;font-weight:600;color:var(--fg);letter-spacing:0}
+.sk{display:grid;grid-template-columns:140px 1fr;gap:10px 18px;font-size:.93rem}
+.sk b{font-weight:600}
+@media(max-width:560px){.sk{grid-template-columns:1fr;gap:0}.sk span{margin-bottom:10px}}
+footer{margin-top:30px;padding:26px 0 90px;border-top:1px solid var(--line);color:var(--mut);font-size:.82rem;text-align:center}
+.add{margin:-8px 0 14px}
+.btn{display:inline-block;padding:6px 14px;border:1px solid var(--fg);border-radius:4px;text-decoration:none;font-size:.82rem;background:transparent}
+.btn.p{background:var(--acc);color:var(--on)}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ctl button{border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:1px 10px;font-size:.78rem}
+#tog{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;background:var(--acc);color:var(--on)}
+dialog{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;max-width:520px;width:calc(100% - 32px);padding:22px}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+label{display:block;margin-top:12px;font-size:.82rem;color:var(--mut)}
+input,textarea{width:100%;margin-top:4px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--soft);color:var(--fg);font:inherit}
+input[type=checkbox]{width:auto;margin-right:6px}
+.acts{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;align-items:center}
+#msg{margin-right:auto;font-size:.82rem;color:var(--mut)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <div class="top">
+  <div class="me" id="me" role="img" aria-label="Profile photo">Photo</div>
+  <div>
+   <h1>Joel Abishek Rajkumar</h1>
+   <p class="role">B.Tech Electrical &amp; Electronics Engineering · Power Electronics, EV Systems, Embedded Control</p>
+  </div>
+ </div>
+ <div class="contact"><a href="mailto:joerajkumar21092006@gmail.com">joerajkumar21092006@gmail.com</a><a href="https://www.linkedin.com/in/joel-abishek">LinkedIn</a><a href="tel:8754312217">8754312217</a><span>Erode / Coimbatore, Tamil Nadu</span></div>
+ <nav><a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#leadership">Leadership</a><a href="#certs">Certifications</a></nav>
+</div></header>
+
+<main class="wrap">
+<section id="about"><h2>About</h2><p id="abouttext" style="margin:0 0 14px"></p></section>
+
+<section id="education"><h2>Education</h2>
+<div class="edu"><h3>Karunya Institute of Technology and Sciences, Coimbatore</h3>
+<div class="meta">B.Tech, Electrical &amp; Electronics Engineering · 2024–2028</div>
+<div class="stats"><div><b>9.26/10</b>CGPA</div><div><b>84.8%</b>Grade XII</div><div><b>94.4%</b>Grade X</div><div><b>87.28</b>JEE Main percentile</div></div></div>
+</section>
+
+<section id="experience"><h2>Experience</h2><div id="exp"></div></section>
+<section id="projects"><h2>Projects</h2><div id="proj"></div></section>
+
+<section id="skills"><h2>Technical Skills</h2>
+<div class="sk">
+<b>Programming</b><span>C, C++, Python, MATLAB</span>
+<b>Engineering Tools</b><span>MATLAB/Simulink, PVsyst, LabVIEW, Keil, AutoCAD Electrical</span>
+<b>Core EEE</b><span>Power Electronics, Power Systems, Electrical Machines, Electric Traction, Renewable Energy, EV Systems</span>
+<b>Embedded / AI</b><span>ESP32, Embedded C, Sensors, IoT, Random Forest, DQN, Signal Processing</span>
+</div></section>
+
+<section id="leadership"><h2>Leadership</h2><div id="lead"></div></section>
+<section id="certs"><h2>Certifications</h2><div class="cg" id="cert"></div></section>
+</main>
+<footer>Joel Abishek Rajkumar · <a href="mailto:joerajkumar21092006@gmail.com">joerajkumar21092006@gmail.com</a></footer>
+<script type="application/json" id="data">{"about": "I’m an EEE student with research and industrial exposure in power electronics, EV systems, electric traction and intelligent control. I’ve worked as a Research Intern at NIT Tiruchirappalli and trained at TVS Motor Company, Indian Railways, TANGEDCO and a thermal power plant. I work in MATLAB/Simulink, C/C++, embedded systems and ML-based engineering applications.", "me": "", "exp": [{"t": "TVS Motor Company, Hosur", "m": "In-Plant Training · October 2026", "d": "Completed in-plant training at the Hosur plant, with exposure to two-wheeler manufacturing and plant operations.", "i": ""}, {"t": "NIT Tiruchirappalli", "m": "Research Intern · June 2026", "d": "Modelled a reconfigurable Dual Active Bridge bidirectional converter in MATLAB for EV charging, studied Single and Dual Phase Shift modulation, and trained a Deep Q-Network agent to regulate gating phase-shift commands.", "i": ""}, {"t": "Indian Railways, Erode Electric Loco Shed", "m": "In-Plant Training · December 2025", "d": "Assisted in inspection and maintenance of electric locomotives and traction systems. Observed traction motors, transformers and circuit breakers, with exposure to fault diagnosis and preventive maintenance.", "i": ""}, {"t": "TANGEDCO, TNEB Substation", "m": "Industrial Training · June 2025", "d": "Followed the operation of high-voltage equipment, transformers and switchgear, and analysed load flow, voltage regulation and protective relays.", "i": ""}, {"t": "Sakthi Sugars Pvt. Ltd., Modakurichi", "m": "Engineer Intern · December 2024", "d": "Noted boiler performance, heat exchangers and steam generation, with emphasis on energy efficiency and process safety.", "i": ""}], "proj": [{"t": "Dual Active Bridge Converter with Intelligent Control", "d": "Modelled DAB operation and phase-shift modulation, and explored DPS with a reconfigurable capacitor and DQN-based gating control.", "g": ["MATLAB/Simulink", "Power Electronics", "DQN"], "i": ""}, {"t": "Active Suspension System with PID Control", "d": "Developed an active suspension system that uses accelerometer feedback and a PID controller to regulate the response.", "g": ["PID Control", "Accelerometer"], "i": ""}, {"t": "Contactless Glove Doffing System", "d": "Designed a contactless glove doffing system using Arduino as a team of three. A patent proposal is in preparation.", "g": ["Arduino", "Microcontroller"], "i": ""}, {"t": "Hybrid Battery Thermal Management System", "d": "Designed a hybrid passive BTMS with heat pipes and PCM, and researched ESP32 IoT monitoring and Digital Twin approaches.", "g": ["Heat Pipes", "PCM", "Passive Cooling"], "i": ""}, {"t": "Power Quality Disturbance Classification using ML", "d": "Simulated sag, swell, harmonics and flicker, and built a MATLAB GUI to classify disturbances using a 10,000-sample dataset.", "g": ["MATLAB", "Random Forest"], "i": ""}, {"t": "Adaptive Noise Cancellation for Defence Communication", "d": "Developing adaptive noise cancellation to remove acoustic noise while preserving speech, aimed at real-time embedded use.", "g": ["MATLAB", "Signal Processing"], "i": ""}, {"t": "Battery Thermal Management System", "d": "Microcontroller-based thermal regulation for Li-ion packs with temperature sensing, PWM-controlled cooling and safety cut-offs against thermal runaway.", "g": ["Embedded C", "Sensors", "PWM"], "i": ""}, {"t": "Intelligent Shoe for Visually Impaired", "d": "Smart shoe using ultrasonic sensing and buzzer feedback for obstacle detection, with embedded C for real-time distance measurement.", "g": ["Embedded C", "Ultrasonic Sensor"], "i": ""}, {"t": "Portable Solar Mobile Charger", "d": "Compact solar-powered charger with PV panels, voltage regulation and current control, analysed under varying sunlight.", "g": ["PV", "Analog Circuitry"], "i": ""}, {"t": "Solar Power Cost Estimator", "d": "C program that compares solar and conventional electricity costs from load demand, unit rate and solar parameters, with payback analysis.", "g": ["C Programming"], "i": ""}], "cert": [{"t": "Cisco C Essentials 1", "m": "Cisco", "i": ""}, {"t": "Cisco C++ Essentials 1 & 2", "m": "Cisco", "i": ""}, {"t": "Cisco Python Essentials 1", "m": "Cisco", "i": ""}, {"t": "NASA Open Science 101", "m": "NASA", "i": ""}, {"t": "Space Science Research", "m": "IIRS / ISRO", "i": ""}, {"t": "Disaster Risk Detection", "m": "IIRS / ISRO", "i": ""}, {"t": "English Language", "m": "NPTEL · 84%", "i": ""}, {"t": "Sensor Technology", "m": "NPTEL · 68%", "i": ""}, {"t": "AutoDesk Workshop", "m": "NIT Trichy", "i": ""}], "lead": [{"t": "ELECTRA, EEE Students’ Association", "m": "Joint Secretary · 2026 – Present", "d": "Contributed to technical events, outreach and the ELECTRA’26 National Level Symposium."}, {"t": "IEEE Power Electronics Society", "m": "Joint Secretary · 2025–26", "d": "Helped organise technical events for students interested in power electronics."}]}</script>
+<script>
+const S=JSON.parse(document.getElementById("data").textContent);
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function card(it){
+ const im=it.i?`<div class="th"><img src="${esc(it.i)}" alt=""></div>`:"";
+ const tg=it.g&&it.g.length?`<div class="tg">${it.g.map(esc).join(" · ")}</div>`:"";
+ return `<article class="en"><div><h3>${esc(it.t)}</h3>${it.m?`<div class="meta">${esc(it.m)}</div>`:""}${it.d?`<p>${esc(it.d)}</p>`:""}${tg}</div>${im}</article>`;
+}
+["exp","proj","cert","lead"].forEach(k=>{$("#"+k).innerHTML=S[k].map(card).join("")});
+$("#abouttext").textContent=S.about;
+if(S.me)$("#me").innerHTML=`<img src="${esc(S.me)}" alt="Joel Abishek Rajkumar">`;
+</script>
+</body>
+</html>
